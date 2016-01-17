@@ -1,0 +1,58 @@
+﻿<Window x:Class="Demo_Application.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Demo_Application"
+        mc:Ignorable="d"
+        Title="Demo Application" Height="450" Width="525">
+    <TabControl>
+        <TabItem x:Name="financialData" Header="Financial Data">
+            <StackPanel x:Name="financialSP">
+                <Label Content="Widget Count"/>
+                <TextBox Name="widCount"/>
+                <Label Content="Margin Pct"/>
+                <TextBox Name="marginPct"/>
+                <Label Content="Sales Tax"/>
+                <TextBox Name="salesTax"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem x:Name="customerData" Header="Customer Data">
+            <StackPanel x:Name="customerDataSP">
+                <Label Content="Company Name"/>
+                <TextBox Name="compName"/>
+                <Label Content="Project Site Name"/>
+                <TextBox Name="projSiteName"/>
+                <Label Content="Customer First Name"/>
+                <TextBox Name="custFName"/>
+                <Label Content="Customer Last Name"/>
+                <TextBox Name="custLName"/>
+                <Label Content="Customer Address 1"/>
+                <TextBox Name="compAdd1"/>
+                <Label Content="Customer City"/>
+                <TextBox Name="custCity"/>
+                <Label Content="Customer State"/>
+                <TextBox Name="custState"/>
+                <Label Content="Customer Zip Code"/>
+                <TextBox Name="custZip"/>
+            </StackPanel>
+        </TabItem>
+        <TabItem Header="Create Proposal" Height="22" VerticalAlignment="Top">
+            <StackPanel>
+                <Separator Visibility="Hidden" Height="20"/>
+                <Button x:Name="calculatePrice" Width="100" 
+                        HorizontalAlignment="Center" Margin="10,0" 
+                        Click="CalculatePrice" >Calculate Price</Button>
+                <Label>Total Sell</Label>
+                <TextBox x:Name="totalSell" IsReadOnly="True"></TextBox>
+                <Label>Total Margin</Label>
+                <TextBox x:Name="totalMargin" IsReadOnly="True"></TextBox>
+
+                <Separator Visibility="Hidden" Height="20"/>
+                <Button x:Name="createProposal" Width="100" 
+                    HorizontalAlignment="Left" Margin="10,0" Click="CreateProposal">Create Proposal</Button>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+    
+</Window>
